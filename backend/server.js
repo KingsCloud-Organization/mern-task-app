@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/api/tasks", async (req, res) => {
+app.get("https://mern-task-app-kiub.onrender.com/api/tasks", async (req, res) => {
   try {
     const tasks = await db
       .collection("tasks")
@@ -52,7 +52,7 @@ app.get("/api/tasks", async (req, res) => {
 });
 
 
-app.post("/api/tasks", async (req, res) => {
+app.post("https://mern-task-app-kiub.onrender.com/api/tasks", async (req, res) => {
   try {
     const newTask = {
       title: req.body.title,
@@ -81,7 +81,7 @@ app.post("/api/tasks", async (req, res) => {
 });
 
 
-app.patch("/api/tasks/:id", async (req, res) => {
+app.patch("https://mern-task-app-kiub.onrender.com/api/tasks/:id", async (req, res) => {
   try {
     const taskId = new ObjectId(req.params.id);
 
@@ -113,7 +113,7 @@ app.patch("/api/tasks/:id", async (req, res) => {
   }
 });
 
-app.delete("/api/tasks/:id", async (req, res) => {
+app.delete("https://mern-task-app-kiub.onrender.com/api/tasks/:id", async (req, res) => {
   try {
     const taskId = new ObjectId(req.params.id);
 
